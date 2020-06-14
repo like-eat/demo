@@ -15,6 +15,7 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     void paintEvent(QPaintEvent *);
+    static QString a1;
 
 private slots:
     void on_lineEdit_3_textEdited(const QString &arg1);

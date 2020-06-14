@@ -6,19 +6,19 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>500</width>
+    <width>700</width>
     <height>500</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>500</width>
+    <width>700</width>
     <height>500</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>500</width>
+    <width>700</width>
     <height>500</height>
    </size>
   </property>
@@ -34,8 +34,8 @@
      <rect>
       <x>20</x>
       <y>20</y>
-      <width>421</width>
-      <height>451</height>
+      <width>651</width>
+      <height>491</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -537,6 +537,100 @@
        </property>
       </item>
      </widget>
+     <widget class="QWidget" name="widget_3" native="true">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>40</y>
+        <width>93</width>
+        <height>391</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QLabel" name="label_24">
+         <property name="text">
+          <string>每月还款：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_29">
+         <property name="text">
+          <string>首月月供：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_30">
+         <property name="text">
+          <string>每月递减：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_25">
+         <property name="text">
+          <string>贷款总额：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_26">
+         <property name="text">
+          <string>利息总额：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_27">
+         <property name="text">
+          <string>还款总额：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_28">
+         <property name="text">
+          <string>还款月数：</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="widget_4" native="true">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>30</y>
+        <width>121</width>
+        <height>421</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QLineEdit" name="lineEdit_10"/>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_11"/>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_12"/>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_13"/>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_14"/>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_15"/>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_16"/>
+       </item>
+      </layout>
+     </widget>
     </widget>
     <widget class="QWidget" name="page_4">
      <widget class="QLineEdit" name="lineEdit">
@@ -877,6 +971,88 @@
        </property>
       </item>
      </widget>
+     <widget class="QWidget" name="widget_5" native="true">
+      <property name="geometry">
+       <rect>
+        <x>389</x>
+        <y>29</y>
+        <width>211</width>
+        <height>381</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_31">
+         <property name="text">
+          <string>每月还款：</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="lineEdit_17"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_32">
+         <property name="text">
+          <string>首月还款：</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="lineEdit_18"/>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_33">
+         <property name="text">
+          <string>每月递减：</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="lineEdit_19"/>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_34">
+         <property name="text">
+          <string>贷款总额：</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLineEdit" name="lineEdit_20"/>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_35">
+         <property name="text">
+          <string>利息总额：</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QLineEdit" name="lineEdit_21"/>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="label_36">
+         <property name="text">
+          <string>还款总额：</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QLineEdit" name="lineEdit_22"/>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLabel" name="label_37">
+         <property name="text">
+          <string>还款月数：</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <widget class="QLineEdit" name="lineEdit_23"/>
+       </item>
+      </layout>
+     </widget>
     </widget>
     <widget class="QWidget" name="page">
      <widget class="QPushButton" name="pushButton_5">
@@ -1203,6 +1379,88 @@
         <string>根据单价，面积计算</string>
        </property>
       </item>
+     </widget>
+     <widget class="QWidget" name="widget_6" native="true">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>30</y>
+        <width>221</width>
+        <height>401</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_38">
+         <property name="text">
+          <string>每月还款：</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QLineEdit" name="lineEdit_24"/>
+       </item>
+       <item row="1" column="0" colspan="2">
+        <widget class="QLabel" name="label_39">
+         <property name="text">
+          <string>首月还款：</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QLineEdit" name="lineEdit_25"/>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_40">
+         <property name="text">
+          <string>每月递减：</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1" colspan="2">
+        <widget class="QLineEdit" name="lineEdit_26"/>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_41">
+         <property name="text">
+          <string>贷款总额：</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1" colspan="2">
+        <widget class="QLineEdit" name="lineEdit_27"/>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_42">
+         <property name="text">
+          <string>利息总额：</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1" colspan="2">
+        <widget class="QLineEdit" name="lineEdit_28"/>
+       </item>
+       <item row="5" column="0" colspan="2">
+        <widget class="QLabel" name="label_43">
+         <property name="text">
+          <string>还款总额：</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="2">
+        <widget class="QLineEdit" name="lineEdit_29"/>
+       </item>
+       <item row="6" column="0" colspan="2">
+        <widget class="QLabel" name="label_44">
+         <property name="text">
+          <string>还款月数：</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="2">
+        <widget class="QLineEdit" name="lineEdit_30"/>
+       </item>
+      </layout>
      </widget>
     </widget>
    </widget>

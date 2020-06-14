@@ -5,6 +5,7 @@
 #include<QLineEdit>
 #include<QIcon>
 #include<QPainter>
+#include<QtGlobal>
 using namespace std;
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -89,8 +90,53 @@ void MainWindow::on_pushButton_clicked()
     {
         type=2;
     }
-    paymoney x;
-    x.Paymoney(money,period,Lilv,type);
+    double monthrate=Lilv/1200;
+    int period2=period*12;
+    if(type==1)
+    {
+        paymoney x;
+        double a,b,c,d;int e;
+        e=period2;
+        a=x.monthlixi1(money,period2,monthrate);
+        b=x.daikuanlixi1(money,period2,monthrate);
+        c=money;
+        d=x.huankuan1(money,period2,monthrate);
+        QString A,B,C,D,E;
+        A=QString::number(a,'f',1);
+        B=QString::number(b,'f',1);
+        C=QString::number(c,'f',1);
+        D=QString::number(d,'f',1);
+        E=QString::number(e);
+        ui->lineEdit_10->setText(A);
+        ui->lineEdit_13->setText(B);
+        ui->lineEdit_14->setText(C);
+        ui->lineEdit_15->setText(D);
+        ui->lineEdit_16->setText(E);
+    }
+    else if(type==2)
+    {
+        paymoney x;
+        double a,b,c,d,e;int f;
+        f=period2;
+        a=x.firstmonth2(money,period2,monthrate);
+        b=x.monthdijian2(money,period2,monthrate);
+        c=money;
+        d=x.daikuanlixi2(money,period2,monthrate);
+        e=x.huankuan2(money,period2,monthrate);
+        QString A,B,C,D,E,F;
+        A=QString::number(a,'f',1);
+        B=QString::number(b,'f',1);
+        C=QString::number(c,'f',1);
+        D=QString::number(d,'f',1);
+        E=QString::number(e,'f',1);
+        F=QString::number(f);
+        ui->lineEdit_11->setText(A);
+        ui->lineEdit_12->setText(B);
+        ui->lineEdit_13->setText(C);
+        ui->lineEdit_14->setText(D);
+        ui->lineEdit_15->setText(E);
+        ui->lineEdit_16->setText(F);
+    }
 }
 
 void MainWindow::on_pushButton_3_clicked()
@@ -103,7 +149,6 @@ void MainWindow::on_pushButton_3_clicked()
     double Gong=gong.toDouble();
     QString gonglilv=ui->lineEdit_6->text();
     double Gonglilv=gonglilv.toDouble();
-    double money;
     int period;
     switch(ui->comboBox_6->currentIndex())
     {
@@ -133,8 +178,13 @@ void MainWindow::on_pushButton_3_clicked()
     case 23:period=2;break;
     case 24:period=1;break;
     }
-    money=Shangdai+Gong;
+    double money1=Shangdai;
+    double money2=Gong;
     int type;
+    int period2=period*12;
+    double monthrate1,monthrate2;
+    monthrate1=Shanglilv/1200;
+    monthrate2=Gonglilv/1200;
     if(ui->radioButton_3->isChecked())
     {
         type=1;
@@ -143,8 +193,51 @@ void MainWindow::on_pushButton_3_clicked()
     {
         type=2;
     }
-    paymoney y;
-    y.combined(Shangdai,Shanglilv,Gong,Gonglilv,period,type);
+    if(type==1)
+    {
+        paymoney x;
+        double a,b,c,d;int e;
+        e=period2;
+        a=x.monthlixi1(money1,period2,monthrate1)+x.monthlixi1(money2,period2,monthrate2);
+        b=x.daikuanlixi1(money1,period2,monthrate1)+x.daikuanlixi1(money2,period2,monthrate2);
+        c=money1+money2;
+        d=x.huankuan1(money1,period2,monthrate1)+x.huankuan1(money2,period2,monthrate2);
+        QString A,B,C,D,E;
+        A=QString::number(a,'f',1);
+        B=QString::number(b,'f',1);
+        C=QString::number(c,'f',1);
+        D=QString::number(d,'f',1);
+        E=QString::number(e);
+        ui->lineEdit_17->setText(A);
+        ui->lineEdit_20->setText(B);
+        ui->lineEdit_21->setText(C);
+        ui->lineEdit_22->setText(D);
+        ui->lineEdit_23->setText(E);
+    }
+    else if(type==2)
+    {
+        paymoney x;
+        double a,b,c,d,e;int f;
+        f=period2;
+        a=x.firstmonth2(money1,period2,monthrate1)+x.firstmonth2(money2,period2,monthrate2);
+        b=x.monthdijian2(money1,period2,monthrate1)+x.monthdijian2(money2,period2,monthrate2);
+        c=money1+money2;
+        d=x.daikuanlixi2(money1,period2,monthrate1)+x.daikuanlixi2(money2,period2,monthrate2);
+        e=x.huankuan2(money1,period2,monthrate1)+x.huankuan2(money2,period2,monthrate2);
+        QString A,B,C,D,E,F;
+        A=QString::number(a,'f',1);
+        B=QString::number(b,'f',1);
+        C=QString::number(c,'f',1);
+        D=QString::number(d,'f',1);
+        E=QString::number(e,'f',1);
+        F=QString::number(f);
+        ui->lineEdit_18->setText(A);
+        ui->lineEdit_19->setText(B);
+        ui->lineEdit_20->setText(C);
+        ui->lineEdit_21->setText(D);
+        ui->lineEdit_22->setText(E);
+        ui->lineEdit_23->setText(F);
+    }
 }
 
 
@@ -186,6 +279,8 @@ void MainWindow::on_pushButton_5_clicked()
     }
     money=Zongdaikuan;
     int type;
+    int period2=period*12;
+    double monthrate=Lilv/1200;
     if(ui->radioButton_5->isChecked())
     {
         type=1;
@@ -194,8 +289,51 @@ void MainWindow::on_pushButton_5_clicked()
     {
         type=2;
     }
-    paymoney z;
-    z.Paymoney(money,period,Lilv,type);
+    if(type==1)
+    {
+        paymoney x;
+        double a,b,c,d;int e;
+        e=period2;
+        a=x.monthlixi1(money,period2,monthrate);
+        b=x.daikuanlixi1(money,period2,monthrate);
+        c=money;
+        d=x.huankuan1(money,period2,monthrate);
+        QString A,B,C,D,E;
+        A=QString::number(a,'f',1);
+        B=QString::number(b,'f',1);
+        C=QString::number(c,'f',1);
+        D=QString::number(d,'f',1);
+        E=QString::number(e);
+        ui->lineEdit_24->setText(A);
+        ui->lineEdit_27->setText(B);
+        ui->lineEdit_28->setText(C);
+        ui->lineEdit_29->setText(D);
+        ui->lineEdit_30->setText(E);
+    }
+    else if(type==2)
+    {
+        paymoney x;
+        double a,b,c,d,e;int f;
+        f=period2;
+        a=x.firstmonth2(money,period2,monthrate);
+        b=x.monthdijian2(money,period2,monthrate);
+        c=money;
+        d=x.daikuanlixi2(money,period2,monthrate);
+        e=x.huankuan2(money,period2,monthrate);
+        QString A,B,C,D,E,F;
+        A=QString::number(a,'f',1);
+        B=QString::number(b,'f',1);
+        C=QString::number(c,'f',1);
+        D=QString::number(d,'f',1);
+        E=QString::number(e,'f',1);
+        F=QString::number(f);
+        ui->lineEdit_25->setText(A);
+        ui->lineEdit_26->setText(B);
+        ui->lineEdit_27->setText(C);
+        ui->lineEdit_28->setText(D);
+        ui->lineEdit_29->setText(E);
+        ui->lineEdit_30->setText(F);
+    }
 }
 
 void MainWindow::on_pushButton_2_clicked()
@@ -203,6 +341,13 @@ void MainWindow::on_pushButton_2_clicked()
     ui->lineEdit_3->clear();
     ui->lineEdit_4->clear();
     ui->lineEdit_9->clear();
+    ui->lineEdit_10->clear();
+    ui->lineEdit_11->clear();
+    ui->lineEdit_12->clear();
+    ui->lineEdit_13->clear();
+    ui->lineEdit_14->clear();
+    ui->lineEdit_15->clear();
+    ui->lineEdit_16->clear();
 }
 
 void MainWindow::on_pushButton_4_clicked()
@@ -211,12 +356,27 @@ void MainWindow::on_pushButton_4_clicked()
     ui->lineEdit_2->clear();
     ui->lineEdit_5->clear();
     ui->lineEdit_6->clear();
+    ui->lineEdit_17->clear();
+    ui->lineEdit_18->clear();
+    ui->lineEdit_19->clear();
+    ui->lineEdit_20->clear();
+    ui->lineEdit_21->clear();
+    ui->lineEdit_22->clear();
+    ui->lineEdit_23->clear();
+
 }
 
 void MainWindow::on_pushButton_6_clicked()
 {
     ui->lineEdit_7->clear();
     ui->lineEdit_8->clear();
+    ui->lineEdit_24->clear();
+    ui->lineEdit_25->clear();
+    ui->lineEdit_26->clear();
+    ui->lineEdit_27->clear();
+    ui->lineEdit_28->clear();
+    ui->lineEdit_29->clear();
+    ui->lineEdit_30->clear();
 }
 
 void MainWindow::on_comboBox_currentIndexChanged(int index)

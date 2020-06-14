@@ -5,11 +5,14 @@
 class paymoney
 {
 public:
-    void Paymoney(double money,int period,double rate,int type);
-    void combined(double money1,double rate1,double money2,double rate2,int period,int type);
-private:
-    void Paymoney1(double money,int period,double monthrate);
-    void Paymoney2(double money,int period,double monthrate);//money贷款金额,period还款日期,rate代表利率，这里采取输入的方法,type代表是等额本金还是等额本息。
+    //等额本息
+    double monthlixi1(double money,int period,double monthrate);
+    double daikuanlixi1(double money,int period,double monthrate);
+    double huankuan1(double money,int period,double monthrate);
+    double firstmonth2(double money,int period,double monthrate);
+    double monthdijian2(double money,int period,double monthrate);
+    double daikuanlixi2(double money,int period,double monthrate);
+    double huankuan2(double money,int period,double monthrate);
 };
 
 #endif // PAYMONEY_H
